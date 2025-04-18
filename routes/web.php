@@ -14,6 +14,10 @@ Route::view('dashboard', 'dashboard')
     ->name('dashboard');
 
 Route::middleware(['auth'])->group(function () {
+    Route::group(['prefix' => 'dashboard', 'as' => 'dashboard.'], function () {
+        Route::resource('kode-risiko', \App\Http\Controllers\KodeRisikoController::class);
+    });
+
     Route::redirect('settings', 'settings/profile');
 
     Route::get('settings/profile', Profile::class)->name('settings.profile');

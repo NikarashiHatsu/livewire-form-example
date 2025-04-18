@@ -14,6 +14,15 @@
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Platform')" class="grid">
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
+
+                    <flux:navlist.item
+                        icon="brake-warning"
+                        :href="route('dashboard.kode-risiko.index')"
+                        :current="request()->routeIs('dashboard.kode-risiko.*')"
+                        wire:navigate
+                    >
+                        {{ __('Kode Risiko') }}
+                    </flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
 
