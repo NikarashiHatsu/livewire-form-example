@@ -26,6 +26,13 @@ class StoreKodeRisikoRequest extends FormRequest
             'kode_risiko' => 'required|string|max:255',
             'tanggal' => 'required|date',
             'satker' => 'required|string|max:255',
+            'id_risiko.*' => 'required|string|max:255',
+            'kategori_risiko.*' => 'required|string|max:255',
+            'area_dampak.*' => 'required|string|max:255',
+            'sasaran_strategi.*' => 'required|string|max:255',
+            'indikator_kinerja.*' => 'required|string|max:255',
+            'proses_tahapan.*' => 'required|string|max:255',
+            'kriteria_kemungkinan.*' => 'required|string|max:255',
         ];
     }
 }

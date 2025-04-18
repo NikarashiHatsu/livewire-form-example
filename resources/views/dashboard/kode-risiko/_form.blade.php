@@ -52,6 +52,10 @@
         </flux:field>
     </div>
 
+    <div class="col-span-12">
+        <livewire:id-risiko-form :kode-risiko="$kodeRisiko" />
+    </div>
+
     <div class="col-span-12 flex justify-end">
         <flux:button type="submit">
             {{ __('Simpan') }}

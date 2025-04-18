@@ -15,7 +15,7 @@ Route::view('dashboard', 'dashboard')
 
 Route::middleware(['auth'])->group(function () {
     Route::group(['prefix' => 'dashboard', 'as' => 'dashboard.'], function () {
-        Route::resource('kode-risiko', \App\Http\Controllers\KodeRisikoController::class);
+        Route::resource('kode-risiko', \App\Http\Controllers\KodeRisikoController::class)->except('destroy');
     });
 
     Route::redirect('settings', 'settings/profile');

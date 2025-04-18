@@ -17,6 +17,10 @@ final class KodeRisikoTable extends PowerGridComponent
 {
     public string $tableName = 'kode-risiko-table-asaov6-table';
 
+    public string $sortField = 'created_at';
+
+    public string $sortDirection = 'desc';
+
     #[On('delete-kode-risiko')]
     public function deleteKodeRisiko(int $kodeRisiko)
     {
